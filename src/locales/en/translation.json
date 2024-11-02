@@ -1,0 +1,39 @@
+{
+  "genereal": {
+    "download": "Download CV",
+    "copied": "Copied!"
+  },
+  "about": {
+    "title": "About Me",
+    "content": "Full-stack Developer with nearly 2 years of experience specializing in Next.js. I started with frontend development and now work on end-to-end projects. I am open to learning new technologies and continuously improving my skills."
+  },
+  "projects": {
+    "title": "Projects",
+    "content_1": "A website for the Conqueror's Blade gaming community, designed to manage users and share experiences with other players.",
+    "content_2": "A website created for programming practice. Project from FrontendMentor.io",
+    "content_3": "A tool for filtering reports from Excel files to display on a webpage, with the option to download the sorted report.",
+    "content_4": "A simple TODO list with options to add and remove tasks.",
+    "preview": "View Project",
+    "code": "View Code"
+  },
+  "experience": {
+    "title": "Experience",
+    "content_1": "Rebuilt the frontend part of an older blog portal by modernizing legacy JavaScript code and implementing new technologies to improve the website's performance and modernity.",
+    "content_2": "This is my third term at the Academy of the Future. Initially, I worked directly with a child, then managed a small team of leaders, and currently support the Manager in Academy activities in Silesia.",
+    "role_2": "Volunteer, Regional Coordinator, Deputy Operations Manager, ",
+    "present": "Currently",
+    "job_skills": {
+      "language": "English",
+      "learn": "Learning new knowledge",
+      "teamwork": "Teamwork",
+      "problem_solving": "Problem-solving",
+      "data_analysis": "Report Analysis",
+      "work_with_kids": "Working with children",
+      "leadership": "Team management"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "localization": "Katowice, Poland"
+  }
+}

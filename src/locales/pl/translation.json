@@ -1,0 +1,39 @@
+{
+  "genereal": {
+    "download": "Pobierz CV",
+    "copied": "Skopiowano!"
+  },
+  "about": {
+    "title": "O mnie",
+    "content": "Full-stack Developer z prawie 2-letnim doświadczeniem, specjalizujący się w Next.js. Rozpoczynałem od frontendu, obecnie rozwijam projekty end-to-end. Jestem otwarty na naukę nowych technologii i ciągłe doskonalenie swoich umiejętności."
+  },
+  "projects": {
+    "title": "Projekty",
+    "content_1": "Strona dla społeczności graczy Conqueror's Blade, służąca do zarządzania użytkownikami oraz dzielenia się doświadczeniami z innymi graczami.",
+    "content_2": "Strona stworzona dla treningu programowania. Projekt z FrontendMentor.io",
+    "content_3": "Narzędzie do filtrowania raportów z plików Excel do wyświetlania na stronie z możliwością pobrania posortowanego raportu.",
+    "content_4": "Prosta TODO lista z możliwością dodawania i usuwania zadań.",
+    "preview": "Zobacz projekt",
+    "code": "Zobacz kod"
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "content_1": "Przebudowa frontendowej części starszego portalu blogowego poprzez modernizację kodu legacy JavaScript i wdrożenie nowych technologii, aby poprawić wydajność i nowoczesność strony.",
+    "content_2": "To moja trzecia edycja w Akademii Przyszłości. Początkowo zajmowałem się pracom z dzieckiem, a następnie zarządzałem małym zespołem liderów, aktualnie wspieram Menedżerkę w działaniach Akademii na Śląsku.",
+    "role_2": "Wolontariusz, Koordynator Regionalny, Zastępca Menadżera Operacyjnego, ",
+    "present": "Obecnie",
+    "job_skills": {
+      "language": "J. Angielski",
+      "learn": "Zdobywanie nowej wiedzy",
+      "teamwork": "Praca w zespole",
+      "problem_solving": "Rozwiązywanie problemów",
+      "data_analysis": "Analiza Raportów",
+      "work_with_kids": "Praca z dziećmi",
+      "leadership": "Zarzadzanie zespołem"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "localization": "Katowice, Polska"
+  }
+}
