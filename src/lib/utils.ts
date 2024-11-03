@@ -79,7 +79,7 @@ export function data() {
     },
     {
       title: t("experience.role_2"),
-      company: "BlockchainWares Software Sp. z o.o.",
+      company: "Stowarzyszenie WIOSNA, Akademia Przyszłości",
       description: t("experience.content_2"),
       skills: [
         t("experience.job_skills.learn"),

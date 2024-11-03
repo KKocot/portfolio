@@ -7,7 +7,7 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ReactCountryFlag from "react-country-flag";
@@ -33,7 +33,6 @@ const itemVariants = {
 
 export function App() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-  const [isEmailCopied, setIsEmailCopied] = useState(false);
   const [typedText, setTypedText] = useState("");
   const { t, i18n } = useTranslation();
   const { projects, experience, fullText } = data();
@@ -54,12 +53,6 @@ export function App() {
 
     return () => clearInterval(typingInterval);
   }, []);
-
-  const copyEmail = async () => {
-    await navigator.clipboard.writeText("k.kocot@bard-dev.com");
-    setIsEmailCopied(true);
-    setTimeout(() => setIsEmailCopied(false), 2000);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-blue-100 py-12 px-4 sm:px-6 lg:px-8">
@@ -234,9 +227,12 @@ export function App() {
                 onHoverEnd={() => setHoveredProject(null)}
               >
                 <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-slate-200 mb-4">
+                  <h3 className="text-2xl font-semibold text-slate-200 mb-1">
                     {job.title}
                   </h3>
+                  <h2 className="text-lg font-semibold text-blue-300 mb-4">
+                    {job.company}
+                  </h2>
                   <p className="text-blue-300 mb-6">{job.description}</p>
                   <div className="flex flex-col">
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -272,25 +268,13 @@ export function App() {
           </h2>
           <div className="flex items-center justify-between flex-col sm:flex-row gap-3">
             <motion.div className="relative" whileHover={{ scale: 1.05 }}>
-              <motion.button
-                onClick={copyEmail}
+              <motion.a
+                href="mailto:k.kocot@bard-dev.com"
                 className="flex items-center text-blue-300 hover:text-teal-400 transition-colors duration-200"
               >
                 <Mail size={24} className="mr-2" />
                 k.kocot@bard-dev.com
-              </motion.button>
-              <AnimatePresence>
-                {isEmailCopied && (
-                  <motion.span
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute left-full text-green-400 text-sm"
-                  >
-                    {t("general.copied")}
-                  </motion.span>
-                )}
-              </AnimatePresence>
+              </motion.a>
             </motion.div>
             <motion.a
               href="tel:+48665011514"
