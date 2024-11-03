@@ -11,118 +11,34 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ReactCountryFlag from "react-country-flag";
+import { data } from "./lib/utils";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 export function App() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [isEmailCopied, setIsEmailCopied] = useState(false);
   const [typedText, setTypedText] = useState("");
   const { t, i18n } = useTranslation();
-
+  const { projects, experience, fullText } = data();
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
-  };
-  const projects = [
-    {
-      title: "Conqsite",
-      description: t("projects.content_1"),
-      technologies: [
-        "Next js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Git",
-        "MongoDB",
-        "Tiktalik",
-        "Domain BardDev.com",
-      ],
-      link: "https://conqsite.bard-dev.com",
-      github: "https://github.com/KKocot/conqsite",
-      color: "bg-red-800 text-red-200",
-    },
-    {
-      title: "Countries",
-      description: t("projects.content_2"),
-      technologies: ["React", "TypeScript", "SCSS", "Git", "Vercel"],
-      link: "https://countries-taupe.vercel.app",
-      github: "https://github.com/KKocot/Countries",
-      color: "bg-teal-800 text-teal-200",
-    },
-    {
-      title: "Excel-reader",
-      description: t("projects.content_3"),
-      technologies: [
-        "React",
-        "Vite",
-        "TypeScript",
-        "Tailwind CSS",
-        "xlsx js",
-        "Git",
-        "Vercel",
-        "Domain BardDev.com",
-      ],
-      link: "https://excel-reader.bard-dev.com",
-      github: "https://github.com/KKocot/excel-reader",
-      color: "bg-violet-800 text-violet-200",
-    },
-    {
-      title: "Todo App",
-      description: t("projects.content_4"),
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Git", "Vercel"],
-      link: "https://todo-app-plum.vercel.app",
-      github: "https://github.com/KKocot/TodoApp",
-      color: "bg-zinc-800 text-zinc-200",
-    },
-  ];
-  const experience = [
-    {
-      title: "Frontend Developer",
-      company: "BlockchainWares Software Sp. z o.o.",
-      description: t("experience.content_1"),
-      skills: [
-        "Next js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Blockchain",
-        t("experience.job_skills.language"),
-        t("experience.job_skills.learn"),
-        t("experience.job_skills.teamwork"),
-        t("experience.job_skills.problem_solving"),
-      ],
-      date: "04.2023 – " + t("experience.present"),
-      color: "bg-yellow-800 text-yellow-200",
-    },
-    {
-      title: t("experience.role_2"),
-      company: "BlockchainWares Software Sp. z o.o.",
-      description: t("experience.content_2"),
-      skills: [
-        t("experience.job_skills.learn"),
-        t("experience.job_skills.teamwork"),
-        t("experience.job_skills.problem_solving"),
-        t("experience.job_skills.work_with_kids"),
-        t("experience.job_skills.leadership"),
-      ],
-      date: "01.2023 – " + t("experience.present"),
-      color: "bg-rose-800 text-rose-200",
-    },
-  ];
-  const fullText = "Full Stack Developer";
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
   };
 
   useEffect(() => {
@@ -209,13 +125,14 @@ export function App() {
               <motion.a
                 href={
                   i18n.language === "pl"
-                    ? "/kkocotcvpl.pdf"
-                    : "/kkocotcveng.pdf"
+                    ? "/kkocot-cv-pl.pdf"
+                    : "/kkocot-cv-eng.pdf"
                 }
                 className="text-zinc-300 hover:text-teal-400 transition-colors duration-200"
                 whileHover={{ y: -5, rotate: 360 }}
                 whileTap={{ scale: 0.95 }}
-                title={t("general.download")}
+                title="CV"
+                download
               >
                 <FileText size={36} />
                 <span className="sr-only">{t("general.download")}</span>
@@ -251,10 +168,12 @@ export function App() {
                 onHoverEnd={() => setHoveredProject(null)}
               >
                 <div className="p-8 flex flex-col justify-between w-full">
-                  <h3 className="text-2xl font-semibold text-slate-200 mb-4">
-                    {project.title}
-                  </h3>
-                  <p className="text-blue-300 mb-6">{project.description}</p>
+                  <div>
+                    <h3 className="text-2xl font-semibold text-slate-200 mb-4">
+                      {project.title}
+                    </h3>
+                    <p className="text-blue-300 mb-6">{project.description}</p>
+                  </div>
                   <div className="flex flex-col">
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
