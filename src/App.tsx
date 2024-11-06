@@ -195,7 +195,7 @@ export function App() {
                         <ExternalLink size={20} className="ml-2" />
                       </a>
                       <a
-                        href={project.link}
+                        href={project.github}
                         target="_blank"
                         className="inline-flex items-center text-blue-300 hover:text-teal-400 transition-colors duration-200 font-semibold"
                       >
