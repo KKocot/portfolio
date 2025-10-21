@@ -55,7 +55,7 @@ export function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-blue-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-teal-950 via-slate-800 to-zinc-900 text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
       <motion.div
         className="max-w-4xl mx-auto"
         initial="hidden"
@@ -64,7 +64,7 @@ export function App() {
       >
         <motion.header className="mb-16" variants={itemVariants}>
           <div className="flex justify-between">
-            <h1 className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
+            <h1 className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-slate-400 to-teal-400">
               Krzysztof Kocot
             </h1>
             <div className="flex gap-2">
@@ -135,7 +135,7 @@ export function App() {
         </motion.header>
 
         <section className="mb-20">
-          <h2 className="text-3xl font-semibold text-blue-300 mb-4">
+          <h2 className="text-3xl font-semibold text-slate-300 mb-4">
             {t("about.title")}
           </h2>
           <div className="perspective-1000">
@@ -144,14 +144,17 @@ export function App() {
         </section>
 
         <motion.section className="mb-20" variants={itemVariants}>
-          <h2 className="text-3xl font-semibold text-blue-300 mb-4">
+          <h2 className="text-3xl font-semibold text-slate-300 mb-4">
             {t("projects.title")}
           </h2>
           <div className="gap-2 grid sm:grid-cols-2">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="h-full flex bg-blue-800 bg-opacity-50 shadow-xl rounded-lg overflow-hidden transition-all duration-300"
+                className="h-full flex bg-slate-800 bg-opacity-50 shadow-xl rounded-lg overflow-hidden transition-all duration-300"
+                style={{
+                  boxShadow: "0 10px 25px -5px rgba(20, 184, 166, 0.3)",
+                }}
                 variants={itemVariants}
                 whileHover={{
                   y: -5,
@@ -165,7 +168,7 @@ export function App() {
                     <h3 className="text-2xl font-semibold text-slate-200 mb-4">
                       {project.title}
                     </h3>
-                    <p className="text-blue-300 mb-6">{project.description}</p>
+                    <p className="text-slate-300 mb-6">{project.description}</p>
                   </div>
                   <div className="flex flex-col">
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -183,13 +186,13 @@ export function App() {
                       initial={{ width: 0 }}
                       animate={{ width: hoveredProject === index ? "100%" : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="h-0.5 bg-blue-400 mb-2"
+                      className="h-0.5 bg-slate-400 mb-2"
                     />
                     <div className="flex gap-4">
                       <a
                         href={project.link}
                         target="_blank"
-                        className="inline-flex items-center text-blue-300 hover:text-teal-400 transition-colors duration-200 font-semibold"
+                        className="inline-flex items-center text-slate-300 hover:text-teal-400 transition-colors duration-200 font-semibold"
                       >
                         {t("projects.preview")}
                         <ExternalLink size={20} className="ml-2" />
@@ -198,7 +201,7 @@ export function App() {
                         <a
                           href={project.github}
                           target="_blank"
-                          className="inline-flex items-center text-blue-300 hover:text-teal-400 transition-colors duration-200 font-semibold"
+                          className="inline-flex items-center text-slate-300 hover:text-teal-400 transition-colors duration-200 font-semibold"
                         >
                           {t("projects.code")}
                           <Github size={20} className="ml-2" />
@@ -212,14 +215,17 @@ export function App() {
           </div>
         </motion.section>
         <motion.section className="mb-20" variants={itemVariants}>
-          <h2 className="text-3xl font-semibold text-blue-300 mb-4">
+          <h2 className="text-3xl font-semibold text-slate-300 mb-4">
             {t("experience.title")}
           </h2>
           <div className="space-y-6">
             {experience.map((job, index) => (
               <motion.div
                 key={index}
-                className="bg-blue-800 bg-opacity-50 shadow-xl rounded-lg overflow-hidden transition-all duration-300"
+                className="bg-slate-800 bg-opacity-50 shadow-xl rounded-lg overflow-hidden transition-all duration-300"
+                style={{
+                  boxShadow: "0 10px 25px -5px rgba(20, 184, 166, 0.3)",
+                }}
                 variants={itemVariants}
                 whileHover={{
                   y: -5,
@@ -232,10 +238,10 @@ export function App() {
                   <h3 className="text-2xl font-semibold text-slate-200 mb-1">
                     {job.title}
                   </h3>
-                  <h2 className="text-lg font-semibold text-blue-300 mb-4">
+                  <h2 className="text-lg font-semibold text-slate-300 mb-4">
                     {job.company}
                   </h2>
-                  <p className="text-blue-300 mb-6">{job.description}</p>
+                  <p className="text-slate-300 mb-6">{job.description}</p>
                   <div className="flex flex-col">
                     <div className="flex flex-wrap gap-2 mb-4">
                       {job.skills.map((tech, techIndex) => (
@@ -252,10 +258,10 @@ export function App() {
                       initial={{ width: 0 }}
                       animate={{ width: hoveredProject === index ? "100%" : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="h-0.5 bg-blue-400 mb-2"
+                      className="h-0.5 bg-slate-400 mb-2"
                     />
                     <div className="flex gap-4">
-                      <p className="text-blue-300">{job.date}</p>
+                      <p className="text-slate-300">{job.date}</p>
                     </div>
                   </div>
                 </div>
@@ -265,14 +271,14 @@ export function App() {
         </motion.section>
 
         <motion.footer variants={itemVariants}>
-          <h2 className="text-3xl font-semibold text-blue-300 mb-4">
+          <h2 className="text-3xl font-semibold text-slate-300 mb-4">
             {t("contact.title")}
           </h2>
           <div className="flex items-center justify-between flex-col sm:flex-row gap-3">
             <motion.div className="relative" whileHover={{ scale: 1.05 }}>
               <motion.a
                 href="mailto:k.kocot@bard-dev.com"
-                className="flex items-center text-blue-300 hover:text-teal-400 transition-colors duration-200"
+                className="flex items-center text-slate-300 hover:text-teal-400 transition-colors duration-200"
               >
                 <Mail size={24} className="mr-2" />
                 k.kocot@bard-dev.com
@@ -280,14 +286,14 @@ export function App() {
             </motion.div>
             <motion.a
               href="tel:+48665011514"
-              className="flex items-center text-blue-300 hover:text-teal-400 transition-colors duration-200"
+              className="flex items-center text-slate-300 hover:text-teal-400 transition-colors duration-200"
               whileHover={{ x: 5, scale: 1.05 }}
             >
               <Phone size={24} className="mr-1" />
               +48 665 011 514
             </motion.a>
             <motion.a
-              className="flex items-center text-blue-300 hover:text-teal-400 transition-colors duration-200"
+              className="flex items-center text-slate-300 hover:text-teal-400 transition-colors duration-200"
               whileHover={{ x: 5, scale: 1.05 }}
               target="_blank"
               href="https://www.google.com/maps/place/Katowice/@50.2139585,18.9254101,23477m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4716ce2336a1ccd1:0xb9af2a350559fabb!8m2!3d50.2648919!4d19.0237815!16zL20vMGJsZDg?hl=pl-PL&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"
