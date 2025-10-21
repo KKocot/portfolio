@@ -10,9 +10,11 @@
   "projects": {
     "title": "Projekty",
     "content_1": "Strona dla społeczności graczy Conqueror's Blade, służąca do zarządzania użytkownikami oraz dzielenia się doświadczeniami z innymi graczami.",
-    "content_2": "Strona stworzona dla treningu programowania. Projekt z FrontendMentor.io",
+    "content_2": "Serwis backendowy z bazą danych stworzony do komunikacji małych projektów z bazą danych.",
     "content_3": "Narzędzie do filtrowania raportów z plików Excel do wyświetlania na stronie z możliwością pobrania posortowanego raportu.",
-    "content_4": "Prosta TODO lista z możliwością dodawania i usuwania zadań.",
+    "content_4": "Prosta strona z fiszkami do nauki, zasilona danymi z pliku JSON.",
+    "content_5": "Strona główna Opał Stasiak - firmy zajmującej się składowaniem i sprzedażą opału.",
+    "content_6": "Członek zespołu, który refaktoruje starszy frontend bloga blockchainu Hive.",
     "preview": "Zobacz projekt",
     "code": "Zobacz kod"
   },
@@ -20,6 +22,7 @@
     "title": "Doświadczenie",
     "content_1": "Przebudowa frontendowej części starszego portalu blogowego poprzez modernizację kodu legacy JavaScript i wdrożenie nowych technologii, aby poprawić wydajność i nowoczesność strony.",
     "content_2": "To moja trzecia edycja w Akademii Przyszłości. Początkowo zajmowałem się pracom z dzieckiem, a następnie zarządzałem małym zespołem liderów, aktualnie wspieram Menedżerkę w działaniach Akademii na Śląsku.",
+    "content_3": "Współpraca z klientami w celu zrozumienia ich potrzeb i dostarczenia odpowiednich rozwiązań. Budowanie aplikacji end-to-end, w tym struktur backendowych oraz wdrażanie aplikacji.",
     "role_2": "Wolontariusz, Koordynator Regionalny, Zastępca Menadżera Operacyjnego, ",
     "present": "Obecnie",
     "job_skills": {
@@ -29,7 +32,12 @@
       "problem_solving": "Rozwiązywanie problemów",
       "data_analysis": "Analiza Raportów",
       "work_with_kids": "Praca z dziećmi",
-      "leadership": "Zarzadzanie zespołem"
+      "leadership": "Zarządzanie zespołem",
+      "creativity": "Kreatywność",
+      "work_with_clients": "Praca z klientami",
+      "end_to_end_project_development": "Projekty end-to-end",
+      "backend_structures": "Struktury backendowe",
+      "app_deployment": "Deploy aplikacji"
     }
   },
   "contact": {

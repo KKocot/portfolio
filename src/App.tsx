@@ -194,14 +194,16 @@ export function App() {
                         {t("projects.preview")}
                         <ExternalLink size={20} className="ml-2" />
                       </a>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        className="inline-flex items-center text-blue-300 hover:text-teal-400 transition-colors duration-200 font-semibold"
-                      >
-                        {t("projects.code")}
-                        <Github size={20} className="ml-2" />
-                      </a>
+                      {project.github ? (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          className="inline-flex items-center text-blue-300 hover:text-teal-400 transition-colors duration-200 font-semibold"
+                        >
+                          {t("projects.code")}
+                          <Github size={20} className="ml-2" />
+                        </a>
+                      ) : null}
                     </div>
                   </div>
                 </div>

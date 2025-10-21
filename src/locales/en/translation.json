@@ -10,9 +10,11 @@
   "projects": {
     "title": "Projects",
     "content_1": "A website for the Conqueror's Blade gaming community, designed to manage users and share experiences with other players.",
-    "content_2": "A website created for programming practice. Project from FrontendMentor.io",
+    "content_2": "Backend service with a database created to facilitate communication between small projects and the database.",
     "content_3": "A tool for filtering reports from Excel files to display on a webpage, with the option to download the sorted report.",
-    "content_4": "A simple TODO list with options to add and remove tasks.",
+    "content_4": "A simple flashcard learning website powered by data from a JSON file.",
+    "content_5": "Landing page of Opal Stasiak - a company dealing with the storage and sale of fuel.",
+    "content_6": "Member of the team refactoring legacy frontend of the Hive blockchain blog.",
     "preview": "View Project",
     "code": "View Code"
   },
@@ -20,6 +22,7 @@
     "title": "Experience",
     "content_1": "Rebuilt the frontend part of an older blog portal by modernizing legacy JavaScript code and implementing new technologies to improve the website's performance and modernity.",
     "content_2": "This is my third term at the Academy of the Future. Initially, I worked directly with a child, then managed a small team of leaders, and currently support the Manager in Academy activities in Silesia.",
+    "content_3": "Collaboration with clients to understand their needs and deliver appropriate solutions. Building end-to-end applications, including backend structures and deploying applications.",
     "role_2": "Volunteer, Regional Coordinator, Deputy Operations Manager, ",
     "present": "Currently",
     "job_skills": {
@@ -29,7 +32,12 @@
       "problem_solving": "Problem-solving",
       "data_analysis": "Report Analysis",
       "work_with_kids": "Working with children",
-      "leadership": "Team management"
+      "leadership": "Team management",
+      "creativity": "Creativity",
+      "work_with_clients": "Working with clients",
+      "end_to_end_project_development": "End-to-end project",
+      "backend_structures": "Backend structures",
+      "app_deployment": "App deployment"
     }
   },
   "contact": {
