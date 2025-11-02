@@ -19,13 +19,11 @@ export function data() {
         "Git",
         "Cloudflare",
         "MongoDB",
-        "Tiktalik",
-        "Domain bard-dev.com",
         "Docker",
+        "Server Management",
         "end-to-end project",
       ],
       link: "https://conqsite.bard-dev.com",
-      github: "https://github.com/KKocot/conqsite",
       color: "bg-amber-700 text-amber-100",
     },
 
@@ -39,22 +37,18 @@ export function data() {
         "Git",
         "Docker",
         "Cloudflare",
-        "Tiktalik",
+        "Server Management",
         "REST API",
-        "Domain bard-dev.com",
       ],
-      link: "https://countries-taupe.vercel.app",
       color: "bg-green-700 text-green-200",
     },
     {
       title: "Hive Blog - Denser",
       description: t("projects.content_6"),
       technologies: [
-        "React",
-        "TypeScript",
         "Next js",
+        "TypeScript",
         "Tailwind CSS",
-        "Shadcn UI",
         "Git",
         "Blockchain Hive",
       ],
@@ -71,13 +65,12 @@ export function data() {
         "TypeScript",
         "Tailwind CSS",
         "Cloudflare",
-        "Shadcn UI",
         "xlsx js",
         "Git",
         "Vercel",
-        "Domain bard-dev.com",
       ],
-      link: "https://universal-backend.bard-dev.com/",
+      link: "https://excel-reader.bard-dev.com",
+      github: "https://github.com/KKocot/excel-reader",
       color: "bg-violet-700 text-violet-200",
     },
     {
@@ -89,10 +82,8 @@ export function data() {
         "Vite",
         "Cloudflare",
         "Tailwind CSS",
-        "Shadcn UI",
         "Git",
         "Vercel",
-        "Domain bard-dev.com",
       ],
       link: "https://flashcards.bard-dev.com",
       github: "https://github.com/KKocot/Flashcards",
@@ -172,6 +163,30 @@ export function data() {
     },
   ];
   const fullText = "Full Stack Developer";
+  const skills = {
+    frontend: [
+      "Next js",
+      "Astro",
+      "Vite",
+      "React",
+      "Solid js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Tanstack",
+      "Playwright",
+      "Shadcn UI",
+      "xlsx js",
+    ],
+    backend: ["Node js", "Express", "MongoDB", "REST API"],
+    tools: [
+      "Git",
+      "Docker",
+      "Cloudflare",
+      "Vercel",
+      "Server Management",
+      "GitHub Actions",
+    ],
+  };
 
-  return { projects, experience, fullText };
+  return { projects, experience, fullText, skills };
 }

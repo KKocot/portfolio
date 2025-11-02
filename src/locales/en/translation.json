@@ -5,7 +5,7 @@
   },
   "about": {
     "title": "About Me",
-    "content": "Full-stack Developer with nearly 2 years of experience specializing in Next.js. I started with frontend development and now work on end-to-end projects. I am open to learning new technologies and continuously improving my skills."
+    "content": "Full-stack Developer with nearly 3 years of experience specializing in Next.js. I started with frontend development and now work on end-to-end projects. I am open to learning new technologies and continuously improving my skills."
   },
   "projects": {
     "title": "Projects",
@@ -17,6 +17,25 @@
     "content_6": "Member of the team refactoring legacy frontend of the Hive blockchain blog.",
     "preview": "View Project",
     "code": "View Code"
+  },
+  "skills": {
+    "title": "Skills",
+    "content": "Proficient in a variety of programming languages and frameworks, with a strong focus on modern web development technologies.",
+    "others": "and more...",
+    "categories": {
+      "frontend": {
+        "title": "Frontend",
+        "description": "Frontend technologies and frameworks I work with"
+      },
+      "backend": {
+        "title": "Backend",
+        "description": "Backend technologies and database management"
+      },
+      "tools": {
+        "title": "Tools & DevOps",
+        "description": "Development tools and deployment platforms"
+      }
+    }
   },
   "experience": {
     "title": "Experience",

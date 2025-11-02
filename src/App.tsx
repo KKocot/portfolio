@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ReactCountryFlag from "react-country-flag";
 import { data } from "./lib/utils";
+import SkillsTab from "./components/skills-tab";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -142,7 +143,7 @@ export function App() {
             <p className="text-xl text-slate-200">{t("about.content")}</p>
           </div>
         </section>
-
+        <SkillsTab />
         <motion.section className="mb-20" variants={itemVariants}>
           <h2 className="text-3xl font-semibold text-slate-300 mb-4">
             {t("projects.title")}
@@ -189,14 +190,16 @@ export function App() {
                       className="h-0.5 bg-slate-400 mb-2"
                     />
                     <div className="flex gap-4">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        className="inline-flex items-center text-slate-300 hover:text-teal-400 transition-colors duration-200 font-semibold"
-                      >
-                        {t("projects.preview")}
-                        <ExternalLink size={20} className="ml-2" />
-                      </a>
+                      {project.link ? (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          className="inline-flex items-center text-slate-300 hover:text-teal-400 transition-colors duration-200 font-semibold"
+                        >
+                          {t("projects.preview")}
+                          <ExternalLink size={20} className="ml-2" />
+                        </a>
+                      ) : null}
                       {project.github ? (
                         <a
                           href={project.github}
